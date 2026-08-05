@@ -1,24 +1,25 @@
+import Container from "@/components/Container";
+
 export default function AboutPage() {
     return (
-        <main className="container mx-auto px-6 py-16">
-            <h1 className="text-4xl font-bold mb-6">About Me</h1>
+        <Container>
+            <section className="py-16">
+                <h1 className="text-4xl font-bold">
+                    About Me
+                </h1>
 
-            <p className="mb-4">
-                I'm Nemanja Martic, a FIDE Candidate Master (CM) and chess coach
-                with years of competitive playing and teaching experience.
-            </p>
+                <p className="mt-6 text-slate-600">
+                    I am Nemanja Martic, FIDE Candidate Master
+                    and chess coach. My goal is to help players
+                    understand chess deeper and improve their skills.
+                </p>
 
-            <p className="mb-4">
-                Throughout my coaching career, I have worked with students of
-                different ages and skill levels, helping them improve their
-                tactical vision, positional understanding, opening repertoire,
-                middlegame planning, and endgame technique.
-            </p>
-
-            <p>
-                My goal is to make chess understandable, enjoyable, and
-                accessible for everyone.
-            </p>
-        </main>
+                <p className="mt-4 text-slate-600">
+                    My coaching focuses on tactics, strategy,
+                    openings, middlegames, endgames and practical
+                    game analysis.
+                </p>
+            </section>
+        </Container>
     );
 }

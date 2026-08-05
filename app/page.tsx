@@ -1,28 +1,32 @@
-import Image from "next/image";
+import Container from "@/components/Container";
+import Hero from "@/components/Hero";
+import SectionTitle from "@/components/SectionTitle";
 
-export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="container mx-auto px-6 py-16">
-            <section className="space-y-6">
-                <h1 className="text-5xl font-bold">
-                    Welcome to Chess Learning Platform
-                </h1>
+export default function HomePage() {
+    return (
+        <Container>
+            <Hero />
 
-                <p className="text-lg text-gray-600 max-w-3xl">
-                    My name is Nemanja Martic, a FIDE Candidate Master (CM) and
-                    passionate chess coach. This platform is dedicated to helping
-                    chess players improve through structured lessons, practical
-                    examples, game analysis, and educational articles.
-                </p>
-
-                <p className="text-lg text-gray-600 max-w-3xl">
-                    Whether you're just starting your chess journey or aiming to
-                    reach an advanced level, you'll find useful resources,
-                    coaching information, and regularly published blog posts.
-                </p>
+            <section className="py-12">
+                <SectionTitle
+                    title="About Chess Learning Platform"
+                    description="A place where chess players can improve through structured training and educational content."
+                />
             </section>
-        </main>
-    </div>
-  );
+
+            <section className="py-12">
+                <SectionTitle
+                    title="Chess Coaching"
+                    description="Personalized lessons for beginners and advanced players."
+                />
+            </section>
+
+            <section className="py-12">
+                <SectionTitle
+                    title="Latest Chess Articles"
+                    description="Practical chess knowledge, strategies and analysis."
+                />
+            </section>
+        </Container>
+    );
 }
