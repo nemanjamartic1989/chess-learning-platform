@@ -1,32 +1,53 @@
 import Container from "@/components/Container";
 import Hero from "@/components/Hero";
 import SectionTitle from "@/components/SectionTitle";
+import Button from "@/components/Button";
 
 export default function HomePage() {
     return (
-        <Container>
+        <>
             <Hero />
 
-            <section className="py-12">
-                <SectionTitle
-                    title="About Chess Learning Platform"
-                    description="A place where chess players can improve through structured training and educational content."
-                />
-            </section>
+            <Container>
+                <section className="py-20">
+                    <SectionTitle
+                        title="About Chess Learning Platform"
+                        description="A place where chess players can improve through structured training and educational content."
+                    />
 
-            <section className="py-12">
-                <SectionTitle
-                    title="Chess Coaching"
-                    description="Personalized lessons for beginners and advanced players."
-                />
-            </section>
+                    <div className="mt-8">
+                        <Button href="/about">
+                            Learn More
+                        </Button>
+                    </div>
+                </section>
 
-            <section className="py-12">
-                <SectionTitle
-                    title="Latest Chess Articles"
-                    description="Practical chess knowledge, strategies and analysis."
-                />
-            </section>
-        </Container>
+                <section className="py-20">
+                    <SectionTitle
+                        title="Chess Coaching"
+                        description="Personalized chess training focused on improving your understanding, calculation and practical decision-making."
+                    />
+
+                    <div className="mt-8">
+                        <Button href="/coaching">
+                            View Coaching
+                        </Button>
+                    </div>
+                </section>
+
+                <section className="py-20">
+                    <SectionTitle
+                        title="Latest Chess Articles"
+                        description="Practical chess knowledge, strategies, ideas and game analysis."
+                    />
+
+                    <div className="mt-8">
+                        <Button href="/blog">
+                            Read Articles
+                        </Button>
+                    </div>
+                </section>
+            </Container>
+        </>
     );
 }
