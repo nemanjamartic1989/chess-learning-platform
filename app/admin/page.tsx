@@ -12,7 +12,11 @@ export default async function AdminPage() {
     });
 
     if (!session) {
-        redirect("/admin/login");
+    redirect("/admin/login");
+}
+
+    if (session.user.role !== "admin") {
+        redirect("/");
     }
 
     return (
